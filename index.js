@@ -25,9 +25,19 @@ client.once('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.systemChannel;
+  const channel = member.guild.channels.cache.get('1128795556272533514');
   if (channel) {
-    channel.send(`Welcome ${member.user} to the server! 🎉`);
+    channel.send(`Welcome ${member.user} 🍃 ━━━━━━━━━━━━━━━━━━━━━━━━━━ 🍃
+Welcome to the Forest, <@user>! 🍄
+
+Humare cozy community garden mein aapka swaagat hai! ✨
+
+🌷 ┆ **https://discord.com/channels/1478807406724120658/1478807408342995098
+🌿 ┆ **https://discord.com/channels/1478807406724120658/1478807408867414171
+🌸 ┆ https://discord.com/channels/1478807406724120658/1478807408342995099
+
+Chill karo, music suno aur naye dosto se milo! 🎧💖
+🍃 ━━━━━━━━━━━━━━━━━━━━━━━━🍃`);
   }
 });
 
