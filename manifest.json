@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Discord Mic EQ Boost",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Boosts mic gain and applies a parametric EQ (AutoEq/EQ APO .txt format) to your microphone before it reaches Discord voice calls on discord.com.",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": ["*://discord.com/*", "*://*.discord.com/*"],
