@@ -4,7 +4,7 @@ const eqText = document.getElementById('eqText');
 const fileInput = document.getElementById('fileInput');
 const fileInput2 = document.getElementById('fileInput2');
 const saveBtn = document.getElementById('saveBtn');
-const status = document.getElementById('status');
+
 
 // Parses AutoEq / EQ APO style parametric filter text into a plain obj
 function parseEqText(text) {
@@ -16,7 +16,8 @@ function parseEqText(text) {
   const filterRe = /Filter\s*\d+:\s*(ON|OFF)\s+PK\s+Fc\s+(\d+)\s+Hz\s+(Gain|Atten)\s*(-?\d+(\.\d+)?)\s*dB\s*Q\s*(\d+(\.\d+)?)/i;
 
   for (const line of lines) {
-    const preampMatch = line.match(preampRe);
+  if (line.includes('VSTPlugin')) 
+  { continue; }  const preampMatch = line.match(preampRe);
     if (preampMatch) {
       preampDB = parseFloat(preampMatch[1]);
       continue;
